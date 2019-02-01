@@ -145,7 +145,7 @@ export class HomeComponent implements OnInit {
 		this.nbUsers = 78
 		this.averageAct = "32 min(s)"
     this.nbHeatWaves = 78
-		this.nbCountries = Object.keys(this.HomeData.map.data).length
+		this.nbCountries = 7
 
 		this.averageOutsideTemp = (67 * 100) / 100
 		this.averageBodyTemp = (98 * 100) / 100
