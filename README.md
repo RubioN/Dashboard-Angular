@@ -8,3 +8,5 @@ Simple angular dashboard:
 
 Lib:
 - Chartist
+
+IN PROGRESS...
