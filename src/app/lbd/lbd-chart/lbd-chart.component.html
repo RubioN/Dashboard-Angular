@@ -1,0 +1,41 @@
+<div class="card" style="box-shadow: none;">
+  <div class="header">
+      <!-- if it's normal chart  -->
+      <div class="dropdown show col-lg-2 col-md-2 col-sm-4" style="float: right; border: none; background-color: white;">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border: none;">
+          <button id="export_btn" style="float: right; border: none; background-color: white;"><i class="fa fa-cloud-download" style="vertical-align: middle;font-size:32px; color:grey; margin-right: 3%;"></i></button>
+        </a>
+        <div class="dropdown-menu align_right" aria-labelledby="dropdownMenuLink">
+          <!--<div><a class="dropdown-item decal" (click)="ClickListener(1)">Export to PNG</a></div>-->
+          <div><a class="dropdown-item decal" (click)="ClickListener(2)">Export to PDF</a></div>
+          <div><a class="dropdown-item decal" (click)="ClickListener(3)">Export to CSV</a></div>
+        </div>
+      </div>
+      <div *ngIf="showToggle" class="btn-group btn-group-toggle" data-toggle="buttons" style="float: right; border: none; background-color: white;">
+        <label *ngIf="appComponent.isCel" id="degreeLabel" class="btn labelActive" (click)="onChange(1)">
+          <button class="degreeActive" id="degreeInput" (click)="onChange(1)">°C</button>
+        </label>
+        <label *ngIf="appComponent.isCel" id="fahrenheitLabel" class="btn labelNotActive" (click)="onChange(2)">
+          <button class="degreeNotActive" id="fahrenheitInput" (click)="onChange(2)">°F</button>
+        </label>
+        <label *ngIf="!appComponent.isCel" id="degreeLabel" class="btn labelNotActive" (click)="onChange(1)">
+          <button class="degreeNotActive" id="degreeInput" (click)="onChange(1)">°C</button>
+        </label>
+        <label *ngIf="!appComponent.isCel" id="fahrenheitLabel" class="btn labelActive" (click)="onChange(2)">
+          <button class="degreeActive" id="fahrenheitInput" (click)="onChange(2)">°F</button>
+        </label>
+      </div>
+    <h4 [attr.id]="titleId" class="title">{{ title }}</h4>
+    <p [attr.id]="subtitleId" class="category" >{{ subtitle }}</p>
+  </div>
+  <div [attr.id]="PdfId" class="content noPaddingRight">
+    <div [attr.id]="chartId" class="ct-chart {{ chartClass }} {{ classOverride }}" style="padding:0; margin: 0;"></div>
+    <div class="footer">
+      <div [attr.id]="legendId" class="legend">
+        <span *ngFor="let item of legendItems">
+          <i [ngClass]="item.imageClass"></i> {{ item.title }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

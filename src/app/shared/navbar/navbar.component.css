@@ -1,0 +1,47 @@
+.account_log {
+	font-size: "12px";
+}
+
+.img_logo {
+	margin-top: 0.8%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	max-height: 55px;
+	max-width: 55px;
+}
+
+.text_nav {
+	margin-top: 5%;
+}
+
+.text_nav_page {
+	margin-top: 7%;
+}
+
+@media screen and (max-width: 991px) {
+	.text_nav_page {
+		margin-top: 1%;
+	}
+}
+
+.buttonLogout {
+	color: grey;
+	border: none;
+	width: 100%;
+	border-left: 3px solid #0097CA;
+	border-right: 3px solid #EA212E;
+	border-radius: 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-position: 0 0, 0 100%;
+	background-repeat: no-repeat;
+	-webkit-background-size: 100% 10%;
+	-moz-background-size: 100% 10%;
+	background-size: 100% 10%;
+	background-image: -webkit-linear-gradient(left, #0097CA 0%, #EA212E 100%), -webkit-linear-gradient(left, #0097CA 0%, #EA212E 100%);
+	background-image: -moz-linear-gradient(left, #0097CA 0%, #EA212E 100%), -moz-linear-gradient(left, #0097CA 0%, #EA212E 100%);
+	background-image: -o-linear-gradient(left, #0097CA 0%, #EA212E 100%), -o-linear-gradient(left, #0097CA 0%, #EA212E 100%);
+	background-image: linear-gradient(to right, #0097CA 0%, #EA212E 100%), linear-gradient(to right, #0097CA 0%, #EA212E 100%);
+  }

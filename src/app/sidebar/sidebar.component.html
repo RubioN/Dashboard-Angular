@@ -1,0 +1,31 @@
+<div class="sidebar-wrapper">
+    <div class="logo">
+        <a href="http://www.mydashboard.com/fr/accueil/" target="_blank" class="simple-text">
+            <div class="logo-img txt_center">
+                <img class="txt_center" src="/assets/img/dashboard_logo_white.png" />
+            </div>
+        </a>
+    </div>
+    <ul class="nav responsive-nav">
+        <li *ngIf="isMobileMenu()">
+            <div class="row">
+                <p class="hidden-lg hidden-md col-xs-5">Dashboard</p>
+                <img class="img_logo" src="../../../assets/icons/{{urlLogo}}.png" />
+            </div>
+        </li>
+        <li class="separator hidden-lg hidden-md" *ngIf="isMobileMenu()"></li>
+        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}}">
+            <a [routerLink]="[menuItem.path]">
+                <i class="{{menuItem.icon}}"></i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+        <li class="myCalendar">
+            <app-calendar>
+            </app-calendar>
+        </li>
+        <li class="myProceed">
+            <button class="btn buttonProceed" (click)="proceed()">Proceed</button>
+        </li>
+    </ul>
+</div>

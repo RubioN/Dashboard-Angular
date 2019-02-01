@@ -1,0 +1,33 @@
+<div class="card">
+	<div class="content">
+		<div *ngIf="checkChart">
+			<lbd-chart [title]="(cardTitle)" [subtitle]="(cardSubtitle)" [chartClass]="(chartClass)" [chartType]="(chartType)"
+			 [chartData]="(chartData)" [chartOptions]="(chartOptions)" [chartResponsive]="(chartResponsive)" [legendItems]="(legendItems)"
+			 [withHr]="'false'" [showToggle]="(showToggle)" [footerText]="(cardFooterText)"
+			 (labelDegreeChange)="updateLabelDegree($event)">
+			</lbd-chart>
+		</div>
+		<div *ngIf="checkSimple" class="row">
+			<div *ngIf="!checkChart" class="col-md-4 col-lg-4 col-xs-4">
+				<div *ngIf="cardIcon" class="icon-big">
+					<i class="{{cardIcon}} icn_card"></i>
+				</div>
+				<div *ngIf="cardImg" class="text-center">
+					<img src="{{cardImg}}" class="img_card vertical" />
+				</div>
+			</div>
+			<div class="">
+        <h4 class="title">{{ cardData }}</h4>
+        <p class="category">{{ cardTitle }}</p>
+      </div>
+		</div>
+		<div *ngIf="checkMap" class="">
+			<h4 class="title text-center">{{ cardTitle }}</h4>
+			<app-map *ngIf="checkBubble">
+			</app-map>
+
+			<app-color-map *ngIf="checkColor" [mapData]="mapData" [legendCountries]="legendCountries">
+			</app-color-map>
+		</div>
+	</div>
+</div>

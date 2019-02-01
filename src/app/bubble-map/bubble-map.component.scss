@@ -1,0 +1,29 @@
+@import "../../assets/sass/lbd/variables";
+
+::ng-deep #vector-map {
+	height: 440px;
+	width: 100%;
+	display: block;
+}
+
+::ng-deep g.dxm-control-buttons {
+	stroke-width: 1.5px;
+}
+
+::ng-deep rect.dxm-background {
+	stroke-width: 0px;
+}
+
+::ng-deep g.dxm-marker {
+	circle {
+		fill: $dashboard_blue;
+	}
+}
+
+::ng-deep g.dxm-legend {
+	g {
+		circle {
+			fill: $dashboard_blue;
+		}
+	}
+}

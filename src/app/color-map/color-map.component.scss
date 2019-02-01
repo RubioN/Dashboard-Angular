@@ -1,0 +1,49 @@
+@import "../../assets/sass/lbd/variables";
+
+::ng-deep #vector-map {
+	height: 440px;
+	width: 100%;
+	display: block;
+}
+
+::ng-deep g.dxm-control-buttons {
+	stroke-width: 1.5px;
+}
+
+::ng-deep path.dxm-area {
+	stroke-width: 0.5px;
+}
+
+::ng-deep path.dxm-area-selected {
+	stroke: #6e6e6e;
+	stroke-opacity: 50%;
+	stroke-width: 1px;
+}
+
+::ng-deep rect.dxm-background {
+	stroke-width: 0px;
+}
+
+.class_map {
+	list-style: none;
+}
+
+.class_map_line {
+	font-size: 18px;
+}
+
+.container_report_map {
+	margin-top: 3%;
+}
+
+.line_legend {
+	display:flex;
+}
+
+.img_flag {
+	width: 50%;
+}
+
+.clearAllSpace {
+	padding: 0;
+}

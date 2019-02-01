@@ -1,0 +1,13 @@
+.button_login {
+	background-image: linear-gradient(60deg, #5f70b1 0%, #bb2361 100%);
+	color: white;
+	border: none;
+}
+
+body { 
+	background: url('../../assets/img/lake.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}

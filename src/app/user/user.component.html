@@ -1,0 +1,55 @@
+<body>
+	<div class="main-content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4 col-sm-12">
+					<app-card [cardType]="simple" [cardTitle]="'Users'" [cardIcon]="'fa fa-user'" [cardData]="nbUsers">
+					</app-card>
+				</div>
+
+				<div class="col-lg-4 col-sm-12">
+					<app-card [cardType]="simple" [cardTitle]="'New users'" [cardIcon]="'fa fa-user-plus'" [cardData]="nbNewUsers">
+					</app-card>
+				</div>
+
+				<div class="col-lg-4 col-sm-12">
+					<app-card [cardType]="simple" [cardTitle]="'Sessions'" [cardIcon]="'fa fa-tasks'" [cardData]="nbSessions">
+					</app-card>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<app-card [cardType]="chart" [cardTitle]="'Users'" [cardSubtitle]="'New users'" [chartClass]="'ct-perfect-fourth'"
+					 [chartType]="usersChartType" [chartData]="usersChartData" [chartOptions]="usersChartOptions" [chartResponsive]="usersChartResponsive"
+					 [legendItems]="usersChartLegendItems">
+					</app-card>
+				</div>
+			</div>
+      <div hidden class="row">
+				<div class="col-md-6 col-xs-12">
+					<app-card [cardType]="chart" [cardTitle]="'User Expertise'" [cardSubtitle]="'People declare they are at novice to professional level Scale: 0 - 10'" [chartClass]="'ct-perfect-fourth'"
+						[chartType]="ExpertiseChartType" [chartData]="ExpertiseChartData" [chartOptions]="ExpertiseChartOptions" [chartResponsive]="ExpertiseChartResponsive"
+						[legendItems]="ExpertiseChartLegendItems">
+					</app-card>
+				</div>
+        <div class="col-md-6 col-xs-12">
+          <app-card [cardType]="chart" [cardTitle]="'User Engagement in Activity'" [cardSubtitle]="'People declare they are getting more or less active Scale: 0 - 10'"
+           [chartClass]="'ct-perfect-fourth'" [chartType]="EngagementChartType" [chartData]="EngagementChartData"
+           [chartOptions]="EngagementChartOptions" [chartResponsive]="EngagementChartResponsive" [legendItems]="EngagementChartLegendItems">
+          </app-card>
+        </div>
+      </div>
+			<div hidden class="row">
+        <div class="col-md-12 col-xs-12">
+					<app-card [cardType]="chart" [cardTitle]="'App Trackers'" [cardSubtitle]="''" [chartClass]="'ct-perfect-fourth'"
+					 [chartType]="TrackerChartType" [chartData]="TrackerChartData" [chartOptions]="TrackerChartOptions"
+					 [chartResponsive]="TrackerChartResponsive" [legendItems]="TrackerChartLegendItems">
+					</app-card>
+				</div>
+      </div>
+
+		</div>
+	</div>
+</body>

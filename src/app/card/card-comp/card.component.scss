@@ -1,0 +1,45 @@
+.txt_left {
+	text-align: left;
+}
+
+.txt_center {
+	text-align: center;
+}
+
+.icn_card {
+	font-size: 50px;
+	color: grey;
+}
+
+.img_card {
+	min-width: 100%;
+}
+
+::ng-deep g {
+	text.ct-label {
+		font-size: 16px;
+		fill: white;
+	}
+}
+
+.title_name {
+	text-align: center;
+}
+
+h3 {
+  text-align: left !important;
+}
+
+.remove_padd {
+  text-align: left !important;
+	margin: 1rem 0 0 0;
+	padding: 0;
+}
+
+.margin_name {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 40px;
+	resize: vertical;
+}

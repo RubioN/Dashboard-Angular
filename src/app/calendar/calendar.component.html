@@ -1,0 +1,15 @@
+<div>
+	<h4>Period:</h4>
+</div>
+
+<mat-form-field color="accent">
+  <input matInput id="mat-input-calendar-1" class="colorFont" [matDatepicker]="picker" placeholder="From" [value]="startDate" (dateChange)="addFrom($event)" [matDatepickerFilter]="noDateFilter" disabled>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker [startAt]="startDate" color="accent" disabled="false"></mat-datepicker>
+</mat-form-field>
+<br/>
+<mat-form-field color="accent">
+  <input matInput id="mat-input-calendar-2" class="colorFont" [matDatepicker]="picker2" placeholder="To" [value]="endDate" (dateChange)="addTo($event)" [matDatepickerFilter]="noDateFilter" disabled>
+  <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+  <mat-datepicker #picker2 [startAt]="endDate" color="accent" (selectedChanged)="onDate($event)" disabled="false"></mat-datepicker>
+</mat-form-field>

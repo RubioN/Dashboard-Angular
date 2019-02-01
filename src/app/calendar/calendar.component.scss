@@ -1,0 +1,70 @@
+@import "../../assets/sass/lbd/variables";
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label.mat-accent {
+	color: white;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label.mat-accent {
+	color: white;
+}
+
+::ng-deep .mat-icon-button {
+	color:white;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+	background-color: white;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label {
+	color: white;
+}
+
+::ng-deep .mat-datepicker-content.mat-accent .mat-calendar-body-selected {
+	background-color: $dashboard_blue;
+}
+
+::ng-deep .mat-datepicker-toggle-active.mat-accent {
+	color: $dashboard_blue;
+}
+
+::ng-deep .mat-progress-bar.mat-accent .mat-progress-bar-fill::after {
+	background-color: $dashboard_blue;
+}
+
+::ng-deep .mat-tab-group.mat-accent .mat-ink-bar,.mat-tab-nav-bar.mat-accent .mat-ink-bar{
+	background-color: $dashboard_blue;
+}
+
+::ng-deep .mat-toolbar.mat-accent {
+	background:$dashboard_blue;
+	color:#fff;
+}
+
+::ng-deep .mat-focused .mat-form-field-required-marker{
+	color:white;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple.mat-accent {
+	background-color: $dashboard_blue;
+}
+
+::ng-deep .mat-accent .mat-slider-thumb,.mat-accent .mat-slider-thumb-label,.mat-accent .mat-slider-track-fill {
+	background-color: $dashboard_blue;
+}
+
+::ng-deep .mat-simple-snackbar-action {
+	color: $dashboard_blue;
+}
+
+::ng-deep .mat-accent .mat-input-element {
+	caret-color:$dashboard_blue;
+}
+
+:host ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-suffix .mat-datepicker-toggle-default-icon {
+	width: 2em;
+}
+
+.colorFont {
+	color: white;
+}

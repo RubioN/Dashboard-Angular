@@ -1,0 +1,24 @@
+<dx-vector-map id="vector-map" [bounds]="[-180, 85, 180, -60]" (onClick)="click($event)">
+  <dxo-tooltip [enabled]="true" [customizeTooltip]="customizeTooltip">
+      <dxo-font color="#fff"></dxo-font>
+      <dxo-border [visible]="false"></dxo-border>
+  </dxo-tooltip>
+  <dxi-layer *ngIf="countries" [dataSource]="worldMap" [customize]="customizeLayers">
+  </dxi-layer>
+</dx-vector-map>
+<div class="row">
+	<div class="container_report_map">
+    <ul class="class_map">
+      <li class="class_map_line" *ngFor="let item of legendCountries">
+      <div class="col-md-4 col-lg-4 col-sm-4 line_legend">
+        <div class="col-md-2 col-lg-2 col-sm-2 clearAllSpace">
+          <img src="../../assets/img/flags/{{item.title}}.png" class="img_flag">
+        </div>
+        <div class="col-md-8 col-lg-8 col-sm-8 line_legend" style="margin-top: 1%; padding-left: 0; font-family: Arial, Helvetica, sans-serif;">
+          <div ng-style="'color': item.imageClass;" >{{ item.title }}: {{ item.count }}</div>
+        </div>
+      </div>
+      </li>
+    </ul>
+	</div>
+</div>
