@@ -1,3 +1,31 @@
-<p>
-  dashboards works!
-</p>
+<div class="px-4 py-2">
+    <!-- FIRST -->
+    <div class="agd-card p-4">
+        <!-- CARD TITLE -->
+        <div class="agd-subtitle mb-4">
+            <span>Number of appointments</span>
+        </div>
+        <!-- BAR CHART -->
+        <agd-chart type="Bar" [data]="aptData"></agd-chart>
+    </div>
+    <!-- SECOND -->
+    <div class="d-flex mt-4">
+        <div class="agd-card p-4 me-2">
+            <!-- CARD TITLE -->
+            <div class="agd-subtitle mb-4">
+                <span>Staff presence</span>
+            </div>
+            <!-- BAR CHART -->
+            <agd-chart type="Pie" [data]="staffVacationsData"></agd-chart>
+        </div>
+        <div class="agd-card flex-grow-1 p-4 ms-2">
+            <!-- CARD TITLE -->
+            <div class="agd-subtitle mb-4">
+                <span>Return of investment</span>
+            </div>
+            <!-- BAR CHART -->
+            <agd-chart type="Line" [data]="roiData"></agd-chart>
+        </div>    
+    </div>
+    <!-- THIRD -->
+</div>

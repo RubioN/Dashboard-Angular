@@ -1,0 +1,55 @@
+////////////// BAR
+::ng-deep .ct-series-a .ct-bar {
+    stroke: var(--agd-primary) !important;
+}
+::ng-deep .ct-series-b .ct-bar {
+    stroke: var(--agd-secondary) !important;
+}
+::ng-deep .ct-series-c .ct-bar {
+    stroke: var(--agd-tertiary) !important;
+}
+::ng-deep .ct-series-d .ct-bar {
+    stroke: var(--agd-primary-light) !important;
+}
+
+////////////// DONUT
+::ng-deep .ct-series-a .ct-slice-donut {
+    stroke: var(--agd-primary) !important;
+}
+::ng-deep .ct-series-b .ct-slice-donut {
+    stroke: var(--agd-secondary) !important;
+}
+::ng-deep .ct-series-c .ct-slice-donut {
+    stroke: var(--agd-tertiary) !important;
+}
+::ng-deep .ct-series-d .ct-slice-donut {
+    stroke: var(--agd-primary-light) !important;
+}
+
+////////////// LINE
+::ng-deep .ct-series-a .ct-line {
+    stroke: var(--agd-primary) !important;
+}
+::ng-deep .ct-series-b .ct-line {
+    stroke: var(--agd-secondary) !important;
+}
+::ng-deep .ct-series-c .ct-line {
+    stroke: var(--agd-tertiary) !important;
+}
+::ng-deep .ct-series-d .ct-line {
+    stroke: var(--agd-primary-light) !important;
+}
+
+////////////// POINT
+::ng-deep .ct-series-a .ct-point {
+    stroke: var(--agd-primary) !important;
+}
+::ng-deep .ct-series-b .ct-point {
+    stroke: var(--agd-secondary) !important;
+}
+::ng-deep .ct-series-c .ct-point {
+    stroke: var(--agd-tertiary) !important;
+}
+::ng-deep .ct-series-d .ct-slice-point {
+    stroke: var(--agd-primary-light) !important;
+}

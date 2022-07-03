@@ -48,6 +48,12 @@ div.agd-content {
     background: var(--agd-background);
 }
 
+div.agd-top-bar {
+	@include box_shadow_top_bar();
+    height: 50px;
+    margin-bottom: 2px;
+}
+
 //////////////////////////
 ////////////////////////// BOX
 //////////////////////////
@@ -86,6 +92,12 @@ div.agd-content {
 
 .agd-text {
     font-size: var(--agd-md-size);
+    color: var(--agd-text-main);
+}
+
+.agd-text-bold {
+    font-size: var(--agd-md-size);
+    font-weight: bold;
     color: var(--agd-text-main);
 }
 
