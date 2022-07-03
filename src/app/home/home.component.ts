@@ -7,6 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+    // TOPBAR DASHBOARDS BUTTON
+    get dashboardsLink() {
+        return {
+            link: ['/home/dashboards'],
+            disabled: false,
+        }
+    }
+
+    get contactsLink() {
+        return {
+            link: ['/zdz'],
+            disabled: false,
+        }
+    }    
+
     constructor() { }
 
     ngOnInit() {

@@ -39,6 +39,10 @@ body {
     font-size: var(--agd-md-size);
 }
 
+.agd-pointer {
+    cursor: pointer;
+}
+
 //////////////////////////
 ////////////////////////// CONTENT
 //////////////////////////
@@ -110,4 +114,75 @@ div.agd-top-bar {
     font-size: var(--agd-md-size);
     color: var(--agd-text-main);
 }
+
+.agd-text-white {
+    font-family: MainFontRegular;
+    font-size: var(--agd-md-size);
+    color: var(--agd-white);
+}
+
+.agd-text-white-bold {
+    font-family: MainFontBold;
+    font-size: var(--agd-md-size);
+    color: var(--agd-white);
+}
+
+
+//////////////////////////
+////////////////////////// BACKGROUNDS
+//////////////////////////
+
+.agd-primary-bg {
+    background-color: var(--agd-primary);
+}
+
+.agd-seconday-bg {
+    background-color: var(--agd-secondary);
+}
+
+.agd-tertiary-bg {
+    background-color: var(--agd-tertiary);
+}
+
+//////////////////////////
+////////////////////////// CONTAINERS
+//////////////////////////
+
+.agd-circle {
+    user-select: none;
+    border-radius: 100%;
+    width: 2em;
+    min-width: 2em;
+    height: 2em;
+}
+
+//////////////////////////
+////////////////////////// ACTIONS
+//////////////////////////
+
+.agd-top-bar-actions {
+    height: 50px;
+    width: auto;
+    border-bottom: 2px solid transparent;
+
+    button {
+        height: 30px;
+        line-height: 30px;
+        width: auto;
+    }
+
+    &.active:not([disabled]) {
+        border-color: var(--agd-primary);
+
+        button {
+            color: var(--agd-primary) !important;
+            font-family: MainFontBold;
+
+            &.disabled {
+                color: var(--agd-grey-light);
+            }
+        }
+    }
+}
+
 
