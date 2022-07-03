@@ -1,0 +1,91 @@
+
+@use '@angular/material' as mat;
+@import '~node_modules/bootstrap/scss/bootstrap-grid';
+@import "variables";
+@import "mixins";
+
+$agd-primary: mat.define-palette($primary-palette);
+$agd-accent: mat.define-palette(mat.$purple-palette);
+$agd-theme: mat.define-light-theme(
+    (
+        color: (
+            primary: $agd-primary,
+            accent: $agd-accent,
+        ),
+    )
+);
+
+@include mat.core();
+@include mat.all-component-themes($agd-theme);
+
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: var(--agd-fonts-selection);
+    margin: 0;
+    line-height: 1.5;
+    font-size: var(--agd-md-size);
+}
+
+//////////////////////////
+////////////////////////// CONTENT
+//////////////////////////
+div.agd-content-with-top-bar {
+    width: 100%;
+    height: calc(100% - 52px);
+    overflow-y: auto;
+    background: var(--agd-background);
+}
+
+div.agd-content {
+    width: 100%;
+    height: calc(100%);
+    overflow-y: auto;
+    background: var(--agd-background);
+}
+
+//////////////////////////
+////////////////////////// BOX
+//////////////////////////
+.agd-card {
+    position: relative;
+    height: auto;
+    background: var(--agd-white);
+    border-radius: 5px;
+    @include box_shadow;
+}
+
+//////////////////////////
+////////////////////////// SPACING
+//////////////////////////
+.agd-height-fill-available {
+    height: 100%;
+    height: -moz-available;
+    height: -webkit-fill-available;
+    height: stretch;
+}
+
+//////////////////////////
+////////////////////////// TEXT
+//////////////////////////
+
+.agd-title {
+    font-size: var(--agd-xxl-size);
+    color: var(--agd-text-main);
+}
+
+.agd-subtitle {
+    font-size: var(--agd-lg-size);
+    font-weight: bold;
+    color: var(--agd-text-main);
+}
+
+.agd-text {
+    font-size: var(--agd-md-size);
+    color: var(--agd-text-main);
+}
+

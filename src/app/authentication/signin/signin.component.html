@@ -1,0 +1,27 @@
+<div class="agd-height-fill-available d-flex justify-content-center align-items-center">
+    <!-- SIGNIN CARD -->
+    <div class="agd-card p-4">
+        <div class="agd-title">
+            <span>Sign In</span>
+        </div>
+        <!-- FORM -->
+        <div class="d-flex flex-column flex-md-row mt-4" [formGroup]="fg">
+            <mat-form-field appearance="outline" class="me-md-2">
+                <mat-label>User identifier</mat-label>
+                <input required matInput type="text" formControlName="identifier" />
+                <mat-error>This field is required.</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input required matInput type="password" formControlName="password" />
+                <mat-error>This field is required.</mat-error>
+            </mat-form-field>
+        </div>
+        <!-- PASSWORD FORGOTTEN -->
+        <div class="d-flex justify-content-end">
+            <button mat-button color='primary'>Password forgotten</button>
+        </div>
+        <!-- SIGN IN -->
+        <button mat-raised-button color='primary' (click)="signin()">Sign in</button>
+    </div>
+</div>

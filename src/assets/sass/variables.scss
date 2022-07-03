@@ -1,0 +1,102 @@
+:root {
+	// FONTS
+	--agd-fonts-selection: Roboto, monospace;
+
+	// COLORS
+	--agd-white: white;
+	--agd-white-light: #f3f3f3;
+
+	--agd-text-main: #1b2b45;
+
+	--agd-primary: #22223B;
+	--agd-primary-light: #4A4E69;
+	--agd-secondary: #9A8C98;
+	--agd-tertiary: #C9ADA7;
+
+	--agd-red: #DB162F;
+	--agd-green: #00cf97;
+	--agd-orange: #FF7A0D;
+	--agd-grey: #7b848e;
+
+	--agd-background: #F2E9E4;
+
+	--agd-divider: #979797;
+
+	// FONT-SIZE
+	--agd-sm-size: 12px;
+	--agd-md-size: 14px;
+	--agd-lg-size: 16px;
+	--agd-lg-plus-size: 18px;
+	--agd-xl-size: 20px;
+	--agd-xxl-size: 24px;
+
+	// OTHER
+	--agd-border: 1px solid var(--agd-grey-light);
+	--agd-radius: 3px;
+}
+
+// MATERIAL
+$background-palette: (
+	50: fefefe,
+	100: fefefe,
+	200: fdfdfd,
+	300: fcfcfc,
+	400: fbfbfb,
+	500: fafafa,
+	600: f9f9f9,
+	700: f9f9f9,
+	800: f8f8f8,
+	900: f6f6f6,
+	A100: ffffff,
+	A200: ffffff,
+	A400: ffffff,
+	A700: ffffff,
+	contrast: (
+			50: #000000,
+			100: #000000,
+			200: #000000,
+			300: #ffffff,
+			400: #ffffff,
+			500: #ffffff,
+			600: #ffffff,
+			700: #ffffff,
+			800: #ffffff,
+			900: #ffffff,
+			A100: #000000,
+			A200: #000000,
+			A400: #000000,
+			A700: #000000,
+	),
+);
+$primary-palette: (
+	50: #cecee3,
+	100: #aeaed0,
+	200: #8e8ebe,
+	300: #7d7db5,
+	400: #6d6dab,
+	500: #4a4a82,
+	600: #5d5da2,
+	700: #545492,
+	800: #4a4a82,
+	900: #414171,
+	A100: #ffffff,
+	A200: #efeff6,
+	A400: #aeaed0,
+	A700: #9e9ec7,
+	contrast: (
+			50: #000000,
+			100: #000000,
+			200: #000000,
+			300: #ffffff,
+			400: #ffffff,
+			500: #ffffff,
+			600: #ffffff,
+			700: #ffffff,
+			800: #ffffff,
+			900: #ffffff,
+			A100: #000000,
+			A200: #000000,
+			A400: #000000,
+			A700: #000000,
+	),
+);
