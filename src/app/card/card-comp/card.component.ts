@@ -2,11 +2,6 @@ import { Component, Input, OnInit, AfterViewInit, Output, EventEmitter } from '@
 import { LegendItem, ChartType } from '../../lbd/lbd-chart/lbd-chart.component';
 import { legendCountries } from '../../color-map/color-map.component';
 
-export interface LegendItem {
-	title: string
-	imageClass: string
-}
-
 export enum CardType {
 	simple,
 	chart,
@@ -23,7 +18,6 @@ export enum MapType {
 	templateUrl: './card.component.html',
 	styleUrls: ['./card.component.scss']
 })
-
 
 export class CardComponent implements OnInit, AfterViewInit {
 
@@ -53,11 +47,9 @@ export class CardComponent implements OnInit, AfterViewInit {
 	@Input()
 	public chartType: ChartType
 
-	@Input()
-	public chartData: any
+	@Input() public chartData: any;
 
-	@Input()
-	public chartOptions: any
+	@Input() public chartOptions: any;
 
 	@Input()
 	public chartResponsive: any[]

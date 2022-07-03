@@ -1,16 +1,25 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "module": "commonjs",
+    "module": "es2020",
     "moduleResolution": "node",
+    "importHelpers": true,
     "outDir": "../dist/out-tsc-e2e",
     "sourceMap": true,
-    "target": "es5",
+    "allowSyntheticDefaultImports": true,
+    "target": "es2015",
     "typeRoots": [
       "../node_modules/@types"
+    ],
+    "lib": [
+      "ES2018",
+      "dom"
     ]
   }
 }

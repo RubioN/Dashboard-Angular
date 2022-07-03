@@ -1,12 +1,11 @@
 import { Component, Input, OnInit, AfterViewInit, ChangeDetectionStrategy, ViewChild, SimpleChanges, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 import * as Chartist from 'chartist';
-import { Router } from '@angular/router';
 import * as jsPDF from 'jspdf';
-
+// import { Angular5Csv } from 'angular5-csv/Angular5-csv';
+// COMPONENTS
 import { AppComponent } from '../../app.component'
 
-import { Angular5Csv } from 'angular5-csv/Angular5-csv';
-import { EventEmitter } from '@angular/core';
 
 export interface LegendItem {
   title: string;
@@ -149,7 +148,8 @@ export class LbdChartComponent implements OnInit, AfterViewInit {
       tmp = { labels: data.labels[i], data: data.series[i], legend: legend[i].title };
       newData.push(tmp);
     }
-    new Angular5Csv(newData, id);
+    console.log("no csv for now")
+    // new Angular5Csv(newData, id);
   }
 
   /*
@@ -193,95 +193,95 @@ export class LbdChartComponent implements OnInit, AfterViewInit {
   Func: download pdf
   */
   downloadPdf = (id, legend, id_pdf, arrLegend, chartStyle) => {
-    var name = "#" + id
-    var content = "#" + id_pdf
-    this.inlineCSStoSVG(name);
-    var container = document.querySelector(name);
-    var svg  = document.querySelector(name+" svg");
-    console.log(name)
-    var Elementlegend = document.querySelector("#"+legend);
-    var ElementClassLegend = document.querySelectorAll("#"+legend+" i")
-    var ElementTitle = document.querySelector("#"+this.titleId)
-    var ElementSubTitle = document.querySelector("#"+this.subtitleId)
-    svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-    svg.setAttribute('width', container.clientWidth.toString());
-    svg.setAttribute('height', container.clientHeight.toString());
-    var svgData = (new XMLSerializer()).serializeToString(svg);
-    var canvas = document.createElement("canvas");
-    var svgSize = svg.getBoundingClientRect();
-    canvas.width = svgSize.width;
-    canvas.height = svgSize.height;
-    var ctx = canvas.getContext("2d");
-    var img = document.createElement("img");
-    img.setAttribute('crossOrigin', 'use-credentials');
-    img.onload = function() {
-      ctx.drawImage(img, 0, 0);
-      var doc = new jsPDF();
-      var width = doc.internal.pageSize.getWidth();
-      setTimeout(() => {
-        if (chartStyle == 1) {
-          var newWidth = width / 2
-          var newHeight = (canvas.height * width / canvas.width) / 2
-        }
-        else {
-          var newWidth = width
-          var newHeight = (canvas.height * width / canvas.width)
-        }
-        var imgsrc = canvas.toDataURL("image/png");
-        /* Write : Title & Subtitle */
-        doc.fromHTML(ElementTitle, 10, 0);
-        doc.fromHTML(ElementSubTitle, 10, 10);
+    // var name = "#" + id
+    // var content = "#" + id_pdf
+    // this.inlineCSStoSVG(name);
+    // var container = document.querySelector(name);
+    // var svg  = document.querySelector(name+" svg");
+    // console.log(name)
+    // var Elementlegend = document.querySelector("#"+legend);
+    // var ElementClassLegend = document.querySelectorAll("#"+legend+" i")
+    // var ElementTitle = document.querySelector("#"+this.titleId)
+    // var ElementSubTitle = document.querySelector("#"+this.subtitleId)
+    // svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+    // svg.setAttribute('width', container.clientWidth.toString());
+    // svg.setAttribute('height', container.clientHeight.toString());
+    // var svgData = (new XMLSerializer()).serializeToString(svg);
+    // var canvas = document.createElement("canvas");
+    // var svgSize = svg.getBoundingClientRect();
+    // canvas.width = svgSize.width;
+    // canvas.height = svgSize.height;
+    // var ctx = canvas.getContext("2d");
+    // var img = document.createElement("img");
+    // img.setAttribute('crossOrigin', 'use-credentials');
+    // img.onload = function() {
+    //   ctx.drawImage(img, 0, 0);
+    //   var doc = new jsPDF();
+    //   var width = doc.internal.pageSize.getWidth();
+    //   setTimeout(() => {
+    //     if (chartStyle == 1) {
+    //       var newWidth = width / 2
+    //       var newHeight = (canvas.height * width / canvas.width) / 2
+    //     }
+    //     else {
+    //       var newWidth = width
+    //       var newHeight = (canvas.height * width / canvas.width)
+    //     }
+    //     var imgsrc = canvas.toDataURL("image/png");
+    //     /* Write : Title & Subtitle */
+    //     doc.fromHTML(ElementTitle, 10, 0);
+    //     doc.fromHTML(ElementSubTitle, 10, 10);
 
-        /* Write : Chart */
-        doc.addImage(imgsrc, 'PNG', 0, 20, newWidth, newHeight);
+    //     /* Write : Chart */
+    //     doc.addImage(imgsrc, 'PNG', 0, 20, newWidth, newHeight);
 
-        /* Write : Circle */
-        var maxLn = 190
-        var currentCircleLg = newHeight + 40 //+6
-        var currentCircleLn = 2
-        var sizeCircle = 1
-        var nb = 0
-        var arrColor = [[25,118,210],[244,67, 54],[103,58,183],[239,108,0],[67,160,71],[251,192,45],[158,158,158],[216,27,96],[0,172,193],[142,36,170],[93,64,55]]
-        arrLegend.forEach(el => {
-          if (nb != 0) {
-            if (el.title.length + currentCircleLn + 30 + 3 < maxLn)
-              currentCircleLn += 30
-            else {
-              currentCircleLn = 2
-              currentCircleLg += 10
-            }
-          }
-          doc.setDrawColor(0)
-          doc.setFillColor(arrColor[nb][0], arrColor[nb][1], arrColor[nb][2])
-          doc.circle(currentCircleLn, currentCircleLg, sizeCircle, 'FD')
-          nb++
-        });
+    //     /* Write : Circle */
+    //     var maxLn = 190
+    //     var currentCircleLg = newHeight + 40 //+6
+    //     var currentCircleLn = 2
+    //     var sizeCircle = 1
+    //     var nb = 0
+    //     var arrColor = [[25,118,210],[244,67, 54],[103,58,183],[239,108,0],[67,160,71],[251,192,45],[158,158,158],[216,27,96],[0,172,193],[142,36,170],[93,64,55]]
+    //     arrLegend.forEach(el => {
+    //       if (nb != 0) {
+    //         if (el.title.length + currentCircleLn + 30 + 3 < maxLn)
+    //           currentCircleLn += 30
+    //         else {
+    //           currentCircleLn = 2
+    //           currentCircleLg += 10
+    //         }
+    //       }
+    //       doc.setDrawColor(0)
+    //       doc.setFillColor(arrColor[nb][0], arrColor[nb][1], arrColor[nb][2])
+    //       doc.circle(currentCircleLn, currentCircleLg, sizeCircle, 'FD')
+    //       nb++
+    //     });
 
-        /* Write : Legend */
-        var currentLn = 5
-        var currentLg = newHeight + 34 // +0
-        nb = 0
-        arrLegend.forEach(el => {
-          if (nb != 0) {
-            if (el.title.length + currentLn + 30 < maxLn)
-                currentLn += 30
-            else {
-              currentLn = 5
-              currentLg += 10
-            }
-          }
-          doc.fromHTML(el.title, currentLn, currentLg)
-          nb++;
-        });
+    //     /* Write : Legend */
+    //     var currentLn = 5
+    //     var currentLg = newHeight + 34 // +0
+    //     nb = 0
+    //     arrLegend.forEach(el => {
+    //       if (nb != 0) {
+    //         if (el.title.length + currentLn + 30 < maxLn)
+    //             currentLn += 30
+    //         else {
+    //           currentLn = 5
+    //           currentLg += 10
+    //         }
+    //       }
+    //       doc.fromHTML(el.title, currentLn, currentLg)
+    //       nb++;
+    //     });
 
-        // /* Write : Chart */
-        // doc.addImage(imgsrc, 'PNG', 0, 20, width, canvas.height * width / canvas.width);
+    //     // /* Write : Chart */
+    //     // doc.addImage(imgsrc, 'PNG', 0, 20, width, canvas.height * width / canvas.width);
 
-        /* Save : PDF */
-        doc.save('chart'+id+'.pdf');
-      }, 500);
-    };
-    img.setAttribute("src", "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(svgData))) );
+    //     /* Save : PDF */
+    //     doc.save('chart'+id+'.pdf');
+    //   }, 500);
+    // };
+    // img.setAttribute("src", "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(svgData))) );
   }
 
   /*
