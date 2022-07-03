@@ -18,6 +18,14 @@ $agd-theme: mat.define-light-theme(
 @include mat.core();
 @include mat.all-component-themes($agd-theme);
 
+@font-face {
+    font-family: "MainFontRegular";
+    src: url(../fonts/Montserrat-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: "MainFontBold";
+    src: url(../fonts/Montserrat-Bold.ttf) format("truetype");
+}
 
 html {
     height: 100%;
@@ -80,24 +88,26 @@ div.agd-top-bar {
 //////////////////////////
 
 .agd-title {
+    font-family: MainFontRegular;
     font-size: var(--agd-xxl-size);
     color: var(--agd-text-main);
 }
 
 .agd-subtitle {
+    font-family: MainFontBold;
     font-size: var(--agd-lg-size);
-    font-weight: bold;
     color: var(--agd-text-main);
 }
 
 .agd-text {
+    font-family: MainFontRegular;
     font-size: var(--agd-md-size);
     color: var(--agd-text-main);
 }
 
 .agd-text-bold {
+    font-family: MainFontBold;
     font-size: var(--agd-md-size);
-    font-weight: bold;
     color: var(--agd-text-main);
 }
 
