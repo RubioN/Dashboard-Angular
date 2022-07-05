@@ -5,6 +5,8 @@
     "strictPropertyInitialization": false,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "allowJs": true,
+    "checkJs": false,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,

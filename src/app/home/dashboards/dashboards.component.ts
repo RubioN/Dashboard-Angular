@@ -18,6 +18,9 @@ export class DashboardsComponent implements OnInit {
     // RETURN OF INVESTMENT DATA
     public roiData!: IChartistData;
 
+    // LIST OF COUNTRIES WITH DATA
+    public countries: any;
+
     constructor() { }
 
     ngOnInit() {
@@ -46,6 +49,37 @@ export class DashboardsComponent implements OnInit {
                 [41, 39, 48, 57, 54]
             ]
         }
+        this.countries = {
+            Russia: { customers: 49 },
+            Canada: { customers: 280 },
+            China: { customers: 9 },
+            'United States': { customers: 450 },
+            France: { customers: 749 },
+            Spain: { customers: 117 },
+        };
+        // ASSIGN COLORS
+        Object.keys(this.countries).forEach(state => {
+            this.countries[state].color = this.assignColorForCustomers(this.countries[state].customers);
+        });
     }
 
+    // ASSIGN THE COLOR FOR A GIVEN CUSTOMERS NUMBERS
+    assignColorForCustomers(customers: number) {
+        if (customers < 10) {
+            return "#D1CBD0";
+        }
+        if (customers < 50) {
+            return "#BFB6BD";
+        }
+        if (customers < 100) {
+            return "#B6ABB4";
+        }
+        if (customers < 250) {
+            return "#ACA1AB";
+        }
+        if (customers < 500) {
+            return "#A396A1";
+        }
+        return "#9A8C98";
+    }
 }
