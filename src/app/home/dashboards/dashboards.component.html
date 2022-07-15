@@ -1,39 +1,48 @@
-<div class="px-4 py-2">
-    <!-- FIRST -->
-    <div class="agd-card p-4">
-        <!-- CARD TITLE -->
-        <div class="agd-title mb-4">
-            <span>Number of appointments</span>
-        </div>
-        <!-- BAR CHART -->
-        <agd-chart type="Bar" [data]="aptData"></agd-chart>
+<ng-container *ngIf="loading">
+    <div class="d-flex align-items-center justify-content-center mt-5">
+        <mat-spinner [strokeWidth]="5"></mat-spinner>
     </div>
-    <!-- SECOND -->
-    <div class="d-flex mt-4">
-        <div class="agd-card p-4 me-2">
+</ng-container>
+<ng-container *ngIf="!loading">
+    <div class="px-4 py-2">
+        <!-- FIRST -->
+        <div class="agd-card p-4">
             <!-- CARD TITLE -->
             <div class="agd-title mb-4">
-                <span>Staff presence</span>
+                <span>Number of appointments</span>
             </div>
             <!-- BAR CHART -->
-            <agd-chart type="Pie" [data]="staffVacationsData"></agd-chart>
+            <agd-chart type="Bar" [data]="aptData" [labels]="aptLabels"></agd-chart>
         </div>
-        <div class="agd-card flex-grow-1 p-4 ms-2">
+        <!-- SECOND -->
+        <div class="d-flex mt-4">
+            <div class="agd-card p-4 me-2">
+                <!-- CARD TITLE -->
+                <div class="agd-title mb-4">
+                    <span>Staff presence</span>
+                </div>
+                <!-- BAR CHART -->
+                <agd-chart type="Pie" [data]="staffVacationsData"></agd-chart>
+            </div>
+            <div class="agd-card flex-grow-1 p-4 ms-2">
+                <!-- CARD TITLE -->
+                <div class="agd-title mb-4">
+                    <span>Return of investment</span>
+                </div>
+                <!-- BAR CHART -->
+                <agd-chart type="Line" [data]="roiData" [labels]="roiLabels"></agd-chart>
+            </div>    
+        </div>
+        <!-- THIRD -->
+        <div class="mt-4 agd-card p-4">
             <!-- CARD TITLE -->
             <div class="agd-title mb-4">
-                <span>Return of investment</span>
+                <span>Localization of our customers</span>
             </div>
-            <!-- BAR CHART -->
-            <agd-chart type="Line" [data]="roiData"></agd-chart>
-        </div>    
-    </div>
-    <!-- THIRD -->
-    <div class="mt-4 agd-card p-4">
-        <!-- CARD TITLE -->
-        <div class="agd-title mb-4">
-            <span>Localization of our customers</span>
+            <ng-container *ngIf="countries">
+                <!-- BAR CHART -->
+                <agd-map [countries]="countries"></agd-map>
+            </ng-container>
         </div>
-        <!-- BAR CHART -->
-        <agd-map [countries]="countries"></agd-map>
     </div>
-</div>
+</ng-container>

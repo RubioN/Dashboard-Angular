@@ -14,6 +14,8 @@ export class ChartComponent implements OnInit {
 
     @Input() public data!: IChartistData;
 
+    @Input() public labels: String[];
+
     public options!: IBarChartOptions | ILineChartOptions | IPieChartOptions;
 
     public events: ChartEvent = {
@@ -49,7 +51,7 @@ export class ChartComponent implements OnInit {
                     donutWidth: 60,
                     showLabel: false,
                     startAngle: 270,
-                    total: 100,                    
+                    total: 100,
                 }
                 break;
             case 'Line':
@@ -60,5 +62,14 @@ export class ChartComponent implements OnInit {
             default:
                 break;
         }
+    }
+
+    get pieLabels() {
+        return this.data?.labels?.map(elem => elem);
+    }
+
+    seriesColor(index: number): string {
+        var value = (index + 1) % 26;
+        return (value + 9).toString(36).toLowerCase();
     }
 }

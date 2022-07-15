@@ -4,11 +4,13 @@ import { RouterModule } from '@angular/router';
 import { ChartistModule } from "ng-chartist";
 // MODULES
 import { ToolsModule } from 'src/app/tools.module';
+import { DxVectorMapModule } from 'devextreme-angular';
 // COMPONENTS
 import { DashboardsComponent } from './dashboards.component';
 import { ChartComponent } from './chart/chart.component';
 import { MapComponent } from './map/map.component';
-import { DxVectorMapModule } from 'devextreme-angular';
+// SERVICES
+import { DashboardsService } from './dashboards.service';
 
 @NgModule({
     imports: [
@@ -21,6 +23,9 @@ import { DxVectorMapModule } from 'devextreme-angular';
         DashboardsComponent,
         ChartComponent,
         MapComponent,
+    ],
+    providers: [
+        DashboardsService
     ]
 })
 export class DashboardsModule { }

@@ -1,0 +1,22 @@
+.label-series {
+    background: var(--agd-primary);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+
+.label-series.a {
+    background: var(--agd-primary);
+}
+
+.label-series.b {
+    background: var(--agd-secondary);
+}
+
+.label-series.c {
+    background: var(--agd-tertiary);
+}
+
+.label-series.d {
+    background: var(--agd-primary-light);
+}
